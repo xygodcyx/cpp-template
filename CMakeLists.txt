@@ -1,5 +1,7 @@
+set(PROJECT_NAME myapp)
+
 cmake_minimum_required(VERSION 3.16)
-project(myapp CXX)
+project(${PROJECT_NAME} CXX)
 
 
 set(CMAKE_CXX_STANDARD 17)
@@ -14,7 +16,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
 # add_subdirectory(vendor/glfw)
 
 # ---- 你的可执行文件 ----
-add_executable(app src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
 # 链接 外部库（会自动带上头文件路径和系统依赖）
 # target_link_libraries(app PRIVATE glfw)
 
@@ -22,6 +24,6 @@ add_executable(app src/main.cpp)
 if(MSVC)
     add_compile_options(/W4 /permissive-)
 else()
-    target_compile_options(app PRIVATE -Wall -Wextra -Wpedantic)
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
