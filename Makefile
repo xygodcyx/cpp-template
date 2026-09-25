@@ -24,5 +24,7 @@ release:
 clean:
 	rm -rf build bin compile_commands.json
 
-run: debug
-	./build/debug/$(PROJECT_NAME)
+dev: debug
+	./${BUILD_DIR_DEBUG}/${PROJECT_NAME}
+start: release
+	./${BUILD_DIR_RELEASE}/${PROJECT_NAME}
