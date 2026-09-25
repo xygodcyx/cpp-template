@@ -6,7 +6,7 @@ JOBS := $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 
 .DEFAULT_GOAL := debug
 
-.PHONY: config debug release clean
+.PHONY: config debug release clean dev start
 
 config:
 	cmake --preset debug
@@ -26,5 +26,6 @@ clean:
 
 dev: debug
 	./${BUILD_DIR_DEBUG}/${PROJECT_NAME}
+
 start: release
 	./${BUILD_DIR_RELEASE}/${PROJECT_NAME}

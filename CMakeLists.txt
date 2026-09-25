@@ -9,7 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
 
 # FetchContent_Declare(
 #     mylib
-#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../cpp-lib-template  # 指向 engine 源码目录
+#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor/cpp-lib-template  # 指向 engine 源码目录
 # )
 
 # FetchContent_MakeAvailable(mylib)
