@@ -4,7 +4,7 @@ BUILD_DIR_RELEASE := build/release
 
 JOBS := $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 
-.DEFAULT_GOAL := debug
+.DEFAULT_GOAL := dev
 
 .PHONY: config debug release clean dev start
 

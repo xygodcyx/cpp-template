@@ -15,7 +15,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
 # FetchContent_MakeAvailable(mylib)
 
 # ---- 你的可执行文件 ----
-add_executable(${PROJECT_NAME} src/main.cpp)
+
+set(LIB_FILES 
+  # src/main.cpp
+)
+
+set(SOURCE_FILES 
+  src/main.cpp
+)
+
+add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${LIB_FILES})
 # 链接 外部库（会自动带上头文件路径和系统依赖）
 # target_link_libraries(${PROJECT_NAME} PRIVATE mylib::core)
 
