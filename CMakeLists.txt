@@ -31,7 +31,7 @@ set(SOURCE_FILES
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${LIB_FILES})
 # 链接 外部库（会自动带上头文件路径和系统依赖）
-# target_link_libraries(${PROJECT_NAME} PRIVATE mylib::core)
+# target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
 
 # ---- 编译器警告 ----
 if(MSVC)
