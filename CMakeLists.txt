@@ -4,6 +4,8 @@ project(myapp CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
+set(CMAKE_C_COMPILE_OBJECT ON)   
+set(CMAKE_C_CREATE_STATIC_LIBRARY ON)   
 
 # include(FetchContent)
 
@@ -14,10 +16,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   # 生成 compile_commands.json
 
 # FetchContent_MakeAvailable(mylib)
 
+# add_library(glad STATIC vendor/glad/src/glad.c)
+# target_include_directories(glad PUBLIC vendor/glad/include)
+
 # ---- 你的可执行文件 ----
 
 set(LIB_FILES 
-  # src/main.cpp
+  # lib/lib.cpp
 )
 
 set(SOURCE_FILES 
